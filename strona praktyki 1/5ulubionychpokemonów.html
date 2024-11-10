@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="eng">
+   <h1>top 5 pokemonów</h1>
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomasz Ostrówka</title>
+    <link rel="icon" href="Slungie.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <img class="left"  src="steamhappy.png" alt="błąd"/>
+        </header>
+        <nav>
+            
+            <a class="menu" href="index.html">Strona Główna</a>
+            <a class="menu" href="kalkulator brutto netto.html">Kalkutor netto/brutto</a>
+            <a class="menu" href="kalkulator prowizji.html">Kalkulator prowizyjny</a>
+            <a class="menu" href="katalog.html">katalog</a>
+            <a class="menu" href="newblood.html">NEWBLOOD</a>
+            <a class="menu" href="vaporeon.html">vaporeon</a>
+            <a class="menu active" href="5ulubionychpokemonów.html">top 5</a>
+        </nav>
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <img src="charizard.png" alt="charizard" height="800px" width="800px">
+                <img src="gallade.png" alt="gallade" height="800px" width="800px">
+                <img src="piplup.png" alt="piplup" height="800px" width="800px">
+                <img src="gliscor.jpg" alt="gliscor" height="800px" width="800px">
+                <img src="greninja.png" alt="greninja" height="800px" width="800px">
+            </div>
+            <div class="carousel-nav">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll("#carousel img");
+            const totalSlides = slides.length;
+    
+            function updateSlidePosition() {
+                document.getElementById("carousel").style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+    
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlidePosition();
+            }
+    
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlidePosition();
+            }
+        </script>
+    </div>
+</body>
+</html>
