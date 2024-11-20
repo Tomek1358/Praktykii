@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>guziki</title>
+        <link rel="icon" href="wallpaperflare.com_wallpaper (2).jpg" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <img class="left"  src="wallpaperflare.com_wallpaper (2).jpg" alt="błąd"/>
+            </header>
+            <nav>
+                
+                <a class="menu" href="index.html">Strona Główna</a>
+                <a class="menu" href="koncech.html">konstruktor cech</a>
+                <a class="menu active" href="buttony.html">button</a>
+                <a class="menu" href="galeria.html">galeria</a>
+                <a class="menu" href="ładna strona.html">ładna strona</a>
+            </nav>
+
+            <section>
+                <div id="buttons-container"></div>
+                <script>
+                const buttonsContainer = document.getElementById("buttons-container");
+    
+    function createCounterButton(index) {
+        const container = document.createElement("div");
+        container.className = "button-container";
+
+        const button = document.createElement("button");
+        button.textContent = `przycisk ${index}`;
+        button.id = `button-${index}`;
+
+        const counterDisplay = document.createElement("span");
+        counterDisplay.textContent = " Licznik 0";
+        counterDisplay.id = `counter-${index}`;
+
+        let counterValue = 0;
+
+        button.addEventListener("click", () => {
+            counterValue++;
+            counterDisplay.textContent = ` Licznik: ${counterValue}`;
+        });
+
+        container.appendChild(button);
+        container.appendChild(counterDisplay);
+        buttonsContainer.appendChild(container);
+    }
+
+    for (let i = 1; i <= 20; i++) {
+        createCounterButton(i);
+    }
+                </script>
+            </section>
+        </div>
+    </body>
+
+</html>

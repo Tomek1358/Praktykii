@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>konstruktory cech</title>
+        <link rel="icon" href="wallpaperflare.com_wallpaper (2).jpg" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <img class="left"  src="wallpaperflare.com_wallpaper (2).jpg" alt="błąd"/>
+            </header>
+            <nav>
+                
+                <a class="menu" href="index.html">Strona Główna</a>
+                <a class="menu active" href="koncech.html">konstruktor cech</a>
+                <a class="menu" href="buttony.html">button</a>
+                <a class="menu" href="galeria.html">galeria</a>
+                <a class="menu" href="ładna strona.html">ładna strona</a>
+            </nav>
+
+            <section>
+                <div id="app"></div>
+                <script>
+                    class Box {
+        constructor(title, content) {
+            this.title = title;
+            this.content = content;
+        }
+        render() {
+            const boxElement = document.createElement('div');
+            boxElement.className = 'box';
+
+            const titleElement = document.createElement('h3');
+            titleElement.textContent = this.title;
+
+            const contentElement = document.createElement('p');
+            contentElement.textContent = this.content;
+
+            boxElement.appendChild(titleElement);
+            boxElement.appendChild(contentElement);
+
+            return boxElement;
+        }
+    }
+    const app = document.getElementById('app');
+    const box1 = new Box('pudło 1', 'nie wiem');
+    const box2 = new Box('pudło 2', 'co tu');
+    const box3 = new Box('pudło 3', 'wpisać');
+
+    app.appendChild(box1.render());
+    app.appendChild(box2.render());
+    app.appendChild(box3.render());
+                </script>
+            </section>
+        </div>
+    </body>
+
+</html>

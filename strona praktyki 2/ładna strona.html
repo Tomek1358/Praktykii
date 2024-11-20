@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bardzo ładna strona</title>
+        <link rel="icon" href="wallpaperflare.com_wallpaper (2).jpg" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <img class="left"  src="wallpaperflare.com_wallpaper (2).jpg" alt="błąd"/>
+            </header>
+            <nav>
+                
+                <a class="menu" href="index.html">Strona Główna</a>
+                <a class="menu" href="koncech.html">konstruktor cech</a>
+                <a class="menu" href="buttony.html">button</a>
+                <a class="menu" href="galeria.html">galeria</a>
+                <a class="menu active" href="ładna strona.html">ładna strona</a>
+            </nav>
+
+            <section>
+                <div id="app"></div>
+                <script>
+                    function createBanner() {
+                        const banner = document.createElement('div');
+                        banner.className = 'banner';
+                        banner.innerHTML = '<h1>siema</h1>';
+                        return banner;
+                    }
+                    function createSidebar(content) {
+                        const sidebar = document.createElement('div');
+                        sidebar.className = 'sidebar';
+                        sidebar.innerHTML = `<p>${content}</p>`;
+                        return sidebar;
+                    }
+                    function createContent() {
+                        const content = document.createElement('div');
+                        content.className = 'content';
+                        content.innerHTML = `
+                            <h2>główna</h2>
+                            <p>cos tam</p>
+                        `;
+                        return content;
+                    }
+                    function createFooter() {
+                        const footer = document.createElement('div');
+                        footer.className = 'footer';
+                        footer.textContent = 'moja strona';
+                        return footer;
+                    }
+                    const app = document.getElementById('app');
+                    app.appendChild(createBanner());
+                    const mainContent = document.createElement('div');
+                    mainContent.className = 'main-content';
+                    mainContent.appendChild(createSidebar('rzecz na lewo'));
+                    mainContent.appendChild(createContent());
+                    mainContent.appendChild(createSidebar('rzecz na prawo'));
+                    app.appendChild(mainContent);
+                    app.appendChild(createFooter());
+                </script>
+            </section>
+        </div>
+    </body>
+
+</html>

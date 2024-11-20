@@ -1,0 +1,29 @@
+﻿<div id="wrapper">
+        <link rel="stylesheet" href="style.css">
+        <header><img id="imgHeader" src="WWI.jpg" alt="I Wojna Światowa" /></header>
+
+        
+
+
+        <nav>
+            <a class="menu active" href="index.html">Początek</a>
+            <a class="menu" href="news.html">Najważniejsze wydarzenia</a>
+            
+            <a class="menu" href="#">Główny opis</a>
+            <a class="menu" href="#">Koniec wojny</a>
+            <a class="menu"
+          </nav>
+
+
+        <section class="main home">
+            <article>
+                <h1>Nasza pierwsza strona internetowa</h1>
+                <p><img class="left" src="http://websamuraj.pl/strona1/face.jpg" alt="twarz" />Taką stronę jesteś w stanie napisać z palca w godzinę (może dwie) po kilku tygodniach nauki. Pomyśl, co będziesz w stanie zrobić po kilku miesiacach :)</p>
+                <p>Ta strona jest prosta, ale zgodna ze standardami html5 i css3. Można ją oczywiście rozbudować i upiększyć, co też zrobimy w odcinku bonusowym (trzecim). Można też napisać ją zupełnie inaczej i uzyskać ten sam efekt. Dróg do celu jest wiele i nie zawsze jest lepsza czy gorsza.</p>
+                <p>Nauka tworzenia stron to eksperymentowanie. Częściej coś działa niż nie działa. Niech Cię to nie irytuje tylko bawi :)</p>
+            </article>
+            <iframe width="2000" height="900" src="mapa.png" frameborder="0" allowfullscreen></iframe>
+
+        </section>
+        <footer>Tomasz Ostrówka i Damian Zalewski</footer>
+    </div>
